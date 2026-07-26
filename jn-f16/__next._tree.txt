@@ -1,0 +1,3 @@
+:HL["/jahannama/_next/static/chunks/033ljisjcu5un.css","style"]
+:HL["/jahannama/images/products/pa-t05.webp","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"products","param":null,"prefetchHints":0,"slots":{"children":{"name":"code","param":{"type":"d","key":"jn-f16","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"fpwVom8Ou4k7e1HsZe997"}
