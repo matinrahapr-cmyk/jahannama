@@ -1,0 +1,17 @@
+راهنمای انتشار آجر جهان‌نما روی GitHub Pages
+
+این بسته برای Repository با نام jahannama ساخته شده است.
+
+1) فایل‌های قدیمی داخل Repository را حذف کنید، اما خود Repository را حذف نکنید.
+2) فایل ZIP را Extract کنید.
+3) تمام فایل‌ها و پوشه‌های داخل ZIP را مستقیماً در ریشه Repository آپلود کنید.
+4) در Settings > Pages:
+   Source = Deploy from a branch
+   Branch = main
+   Folder = /(root)
+5) Save را بزنید و چند دقیقه منتظر بمانید.
+
+نکته مهم:
+فایل index.html باید مستقیماً در ریشه Repository دیده شود؛ نه داخل یک پوشه دیگر.
+آدرس نهایی:
+https://matinrahapr-cmyk.github.io/jahannama/
