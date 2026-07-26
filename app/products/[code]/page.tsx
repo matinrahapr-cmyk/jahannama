@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { ArrowLeft, Check, Phone } from "@/components/Icons";
 import { storeProducts } from "@/lib/products";
+import { withBasePath } from "@/lib/base-path";
 
 export function generateStaticParams() {
   return storeProducts.map(product => ({ code: product.code.toLowerCase() }));
@@ -19,7 +20,7 @@ export default async function ProductPage({ params }: { params: Promise<{ code: 
   const product = storeProducts.find(item => item.code.toLowerCase() === code.toLowerCase());
 
   if (!product) {
-    return <main><Header/><section className="section"><div className="container emptyProduct"><h1>محصول پیدا نشد</h1><a className="btn btnPrimary" href="/#store-products">بازگشت به محصولات</a></div></section></main>;
+    return <main><Header/><section className="section"><div className="container emptyProduct"><h1>محصول پیدا نشد</h1><a className="btn btnPrimary" href={withBasePath("/#store-products")}>بازگشت به محصولات</a></div></section></main>;
   }
 
   return <main>
@@ -27,7 +28,7 @@ export default async function ProductPage({ params }: { params: Promise<{ code: 
     <section className="productDetailSection">
       <div className="container">
         <nav className="productBreadcrumb" aria-label="مسیر صفحه">
-          <a href="/">صفحه اصلی</a><span>←</span><a href="/#store-products">محصولات</a><span>←</span><span>{product.name}</span>
+          <a href={withBasePath("/")}>صفحه اصلی</a><span>←</span><a href={withBasePath("/#store-products")}>محصولات</a><span>←</span><span>{product.name}</span>
         </nav>
         <div className="productDetailGrid">
           <div className="productDetailGallery"><div className="productMainImage"><img src={product.image} alt={product.name}/><span className="detailStatus">{product.status}</span></div></div>
@@ -42,13 +43,13 @@ export default async function ProductPage({ params }: { params: Promise<{ code: 
             </dl>
             <div className="detailBenefits"><span><Check/> مشاوره انتخاب محصول</span><span><Check/> ارسال سراسری</span><span><Check/> تأمین مستقیم پروژه</span></div>
             <div className="detailActions">
-              <a className="btn btnPrimary" href="/#quote">استعلام قیمت این محصول <ArrowLeft/></a>
+              <a className="btn btnPrimary" href={withBasePath("/#quote")}>استعلام قیمت این محصول <ArrowLeft/></a>
               <a className="btn btnSecondary" href="tel:+989133678359"><Phone/> تماس با فروش</a>
             </div>
             <small className="detailNotice">قیمت براساس مقدار سفارش، مقصد ارسال و موجودی روز اعلام می‌شود.</small>
           </article>
         </div>
-        <div className="backToProducts"><a className="textLink" href="/#store-products">بازگشت به همه محصولات <ArrowLeft/></a></div>
+        <div className="backToProducts"><a className="textLink" href={withBasePath("/#store-products")}>بازگشت به همه محصولات <ArrowLeft/></a></div>
       </div>
     </section>
   </main>;

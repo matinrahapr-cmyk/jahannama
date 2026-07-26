@@ -15,10 +15,15 @@ export const catalog: CatalogNode[] = [
         children: [
           { name: "آجر انگلیسی", slug: "english-brick" },
           { name: "آجر شاموتی", slug: "chamotte-brick" },
-          { name: "آجر سفید", slug: "white-brick" },
-          { name: "آجر طوسی", slug: "gray-brick" },
-          { name: "آجر قهوه‌ای", slug: "brown-brick" },
-          { name: "آجر مشکی", slug: "black-brick" },
+        ],
+      },
+      { name: "آجر سفید", slug: "white-brick" },
+      { name: "آجر طوسی", slug: "gray-brick" },
+      { name: "آجر قهوه‌ای", slug: "brown-brick" },
+      {
+        name: "آجر مشکی",
+        slug: "black-brick",
+        children: [
           { name: "آجر شومینه", slug: "fireplace-brick" },
           { name: "آجر کرکره‌ای", slug: "shutter-brick" },
           { name: "آجر تایل", slug: "tile-brick" },

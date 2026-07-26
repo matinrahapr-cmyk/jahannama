@@ -4,6 +4,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "آجر جهان‌نما | فروش مستقیم آجر نما",
   description: "خرید مستقیم آجر نما، دریافت قیمت پروژه، مشاوره انتخاب و ارسال سراسری.",
+  other: {
+    "codex-preview": "development",
+  },
   icons: {
     icon: "/favicon.png",
     apple: "/favicon.png",
